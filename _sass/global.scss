@@ -1,0 +1,249 @@
+//## STRUCTURE ######
+html, body {
+	height: 100%;
+	width: 100%;
+	font-family: $osans;
+}
+body {
+	overflow-x: hidden;
+}
+body.no-scroll{
+	position: fixed;
+	overflow-y: scroll;
+}
+body.no-scroll-modal {
+	overflow-y: hidden;
+}
+main {
+	display: block;
+	text-align: center;
+	overflow: hidden;
+}
+@import "header";
+@import "footer";
+@import "menu-fs";
+
+//## GLOBAL ELEMENTS #######
+.logo {
+	background: url("../images/logo-original.svg");
+	background-size: 100% 200%;
+}
+h1, h2, h3 {
+	font-family: $osans-cnd;
+}
+.title {
+	font-size: 3em;
+	color: $black1;
+}
+.subtitle {
+	font-size: 2.25em;
+	color: $black1;
+}
+p {
+	text-indent: 1em;
+	line-height: 1.75em;
+	text-align: justify;
+	max-width: $p-em;
+}
+main p + p, li p {
+	margin-top: 1em;
+}
+.intro {
+	padding: 6em 2em;
+	display: inline-block;
+}
+.underlined {
+	@include underlined;
+}
+.contact {
+	font-size: 1.1em;
+	span {
+		color: $green0;
+	}
+	&:before {
+		@include icon(1.3em, "contacto");
+		background-size: 100% 200%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	&.tel:before {
+		background-position: 0 0;
+	}
+	&.mail:before {
+		background-position: 0 100%;
+	}
+}
+.info {
+	color: $blue;
+	border: 0.1em solid $blue;
+	box-sizing: border-box;
+	display: inline-block;
+	margin: 6em 2em 8em;
+	position: relative;
+	&:before{
+		@include iconbkg(4em, 0, 0, 50%, "info");
+		transform: translate(-50%, -50%);
+		z-index: 1;
+	}
+}
+.zigzag {
+	li{
+		padding: 4em 2em 6em;
+		min-height: 12em;
+		.text-wrapper {
+			display: inline-flex;
+			text-align: left;
+			p {
+				margin: auto 1.5em;
+			}
+		}
+		&:nth-child(even) .text-wrapper {
+			flex-direction: row-reverse;
+			text-align: right;
+		}
+	}
+	&.iconbkg li:nth-child(odd) .text-wrapper:before {
+		margin-right: -5em;
+	}
+	&.iconbkg li:nth-child(even) .text-wrapper:before {
+		margin-left: -5em;
+	}
+	&.iconbkg li {
+		.text-wrapper {
+			position: relative;
+			z-index: 1;
+		}
+		&:nth-child(odd) {
+			background: $grey0;
+		}
+	}
+}
+
+//## PARALLAX ELEMENTS #######
+.jarallax {
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 15%;
+	z-index: 1;
+}
+.cover {
+	padding: 20em 0 5em;
+	.text-wrapper {
+		text-align: center;
+		position: relative;
+		padding: 1em .5em;
+		.title {
+			color: $white;
+			text-transform: uppercase;
+			margin-bottom: 0;
+		}
+		.subtitle {
+			color: $white;
+			font-family: $osans;
+			font-size: 1.5em;
+			padding: .25em 0 .75em;
+		}
+		&:before {
+			@include transparent-layer($black2, .6);
+			z-index: -1;
+		}
+	}
+	@for $i from 2 through 8 {
+		&.nav0#{$i} {
+			background-image: url("../images/0#{$i}.jpg");
+		}
+	}
+}
+
+//## CARDS #######
+.card {
+	position: relative;
+	margin: 2em 0;
+	.text-wrapper {
+		max-width: 75em;
+		margin: auto;
+		padding: 0 4em;
+	}
+	.content {
+		position: relative;
+		display: inline-block;
+		text-align: center;
+		max-width: 32em;
+		padding: 3em 4em 5em;
+		margin-bottom: 10em;
+		&.excp {
+			margin-bottom: 6em;
+		}
+		.title {
+			margin-bottom: .75em;
+			line-height: 1em;
+		}
+		&:before {
+			@include transparent-layer($grey1, .75);
+			z-index: -1;
+		}
+	}
+	&:nth-child(odd), &.reverse:nth-child(even) {
+		text-align: right;
+	}
+	&:nth-child(even), &.reverse:nth-child(odd) {
+		text-align: left;
+	}
+	&:before {
+		@include layer;
+		z-index: -1;
+		background-size: cover;
+		max-height: 50em;
+		top: 6.5em;
+	}
+}
+
+//## TOOLTIPS #######
+.tooltip-wrapper {
+	text-align: justify;
+	> * {
+		display: inline;
+		margin: 0;
+	}
+	p:first-child {
+		margin-left: 1em; //same as p indent
+	}
+}
+.tooltip {
+	position: relative;
+	display: inline-block;
+	color: $green1;
+	font-weight: bold;
+	cursor: pointer;
+	.tooltiptext {
+		visibility: hidden;
+		background-color: $black1;
+		color: $white;
+		box-sizing: border-box;
+		padding: .5em 1em;
+		border-radius: .25em;
+		position: absolute;
+		bottom: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 1;
+		opacity: 0;
+		transition: opacity .3s;
+		&:after {
+			content: " ";
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			margin-left: -.4em;
+			border-width: .4em;
+			border-style: solid;
+			border-color: $black1 transparent transparent transparent;
+		}
+	}
+	&:hover .tooltiptext {
+		visibility: visible;
+		opacity: 1;
+		cursor: auto;
+	}
+}

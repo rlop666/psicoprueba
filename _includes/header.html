@@ -1,0 +1,34 @@
+<header id="main-header">
+	<a href="/" class="logo"></a>
+	<button class="menu-launcher">
+		<span class="menu-bar"></span>
+	</button>
+</header>
+<div id="menu-fs">
+	<nav id="menu-options">
+		<ul>
+			{% assign nav_menu = site.html_pages | sort:"nav" %}
+			{% for i in nav_menu %}
+				{% if i.nav %}
+					<li {% if i.url == page.url %}class="active"{%  endif %}>
+						<a href="{{ site.baseurl }}{{ i.url }}">{{ i.title }}</a>
+					</li>
+				{% endif %}
+			{% endfor %}
+		</ul>
+	</nav>
+	<ul id="quotes">
+		{% for quotes in site.data.quotes %}
+			<li class={% if forloop.first %}"visible"{% else %}"hidden"{% endif %}>
+				<blockquote>
+					<p>
+						{{ quotes.quote }}
+					</p>
+					<p>
+						{{ quotes.author }}
+					</p>
+				</blockquote>
+			</li>
+		{% endfor %}
+	</ul>
+</div>

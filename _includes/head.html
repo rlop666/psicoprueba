@@ -1,0 +1,16 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PsicoNueve</title>
+<link type="text/css" rel="stylesheet" href="{{ site.github.url }}/assets/stylesheets/application.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,600|Pathway+Gothic+One" rel="stylesheet">
+{% include favicon.html %}
+<script src='https://maps.googleapis.com/maps/api/js?key={{ site.gmapi }}&sensor=false&extension=.js'></script>
+<script type="text/javascript" src="{{ site.github.url }}/assets/scripts/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="{{ site.github.url }}/assets/scripts/jquery.easing.1.3.js"></script>
+<script src="{{ site.github.url }}/assets/scripts/jarallax.min.js"></script>
+<script src="{{ site.github.url }}/assets/scripts/mobile-detect.min.js"></script>
+<script type="text/javascript" src="{{ site.github.url }}/assets/scripts/scripts.js"></script>
+<script type="text/javascript" src="{{ site.github.url }}/assets/scripts/map.js"></script>
+{% if jekyll.environment == "development" %}
+	<script type="text/javascript" src="/assets/scripts/reload.js"></script>
+{% endif %}

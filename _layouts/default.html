@@ -1,0 +1,19 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		{% include head.html %}
+	</head>
+	<body>
+		{% include header.html %}
+		<main>
+			{% unless page.exclude %}
+				{% include cover.html %}
+			{% endunless %}
+			{{ content }}
+		</main>
+		{% include footer.html %}
+	</body>
+</html>

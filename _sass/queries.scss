@@ -1,0 +1,439 @@
+/* Extra large desktops */
+@media (max-width: 1600px) {
+}
+/* Large Devices, Wide Screens */
+@media (max-width : 1280px) {
+}
+/* Medium Devices, Desktops */
+@media (max-width : 992px) {
+}
+/* Small Devices, Tablets */
+@media (max-width : 768px) {
+}
+/* Extra Small Devices, Phones */
+@media (max-width : 480px) {
+}
+/* Custom, iPhone Retina */
+@media (max-width : 320px) {
+}
+
+//## GLOBALES #######
+@media (max-width: 1280px) {
+	.right-img, .right-img.card:before {
+			background-position: right !important;
+	}
+}
+@media (max-width: 768px) {
+	.intro {
+		@include short-padding;
+		padding-top: 4em;
+		padding-bottom: 4em;
+	}
+	.info {
+		margin: 0;
+		padding: 4em 2em 5em !important;
+		max-width: 100% !important;
+	}
+}
+@media (max-width: 660px) {
+	.zigzag {
+		&.iconbkg li {
+			@include short-padding;
+			.text-wrapper:before {
+				margin: 0;
+				position: absolute;
+				z-index: -1;
+			}
+			.title {
+				text-align: center;
+			}
+			p {
+				margin: 0;
+			}
+		}
+		&.iconbkg li:nth-child(odd) .text-wrapper:before {
+			left: -1.5em;
+		}
+		&.iconbkg li:nth-child(even) .text-wrapper:before {
+			right: -1.5em;
+		}
+	}
+}
+@media (max-width: 480px) {
+	.title, .subtitle {
+		font-size: 2em;
+	}
+	.zigzag.iconbkg li .title {
+		margin-bottom: .25em;
+	}
+}
+
+//## COVERS #######
+@media (max-width: 1600px) {
+	#index-cover {
+		.text-wrapper {
+			font-size: 1vw;
+		}
+	}
+}
+@media (max-width: 1366px) {
+	.cover {
+		padding: 20% 0 5%;
+		&.nav05 {
+			background-image: url("../images/05b.jpg");
+		}
+	}
+}
+@media (max-width: 960px) {
+	#index-cover{
+		.text-wrapper {
+			font-size: .7em;
+			width: 70%;
+		}
+		&.jarallax {
+			background-position: 87% 70%;
+		}
+	}
+}
+@media (max-width: 768px) {
+	.cover {
+		display: flex;
+		flex-direction: column-reverse;
+		padding: 0 0 0em;
+		height: 22em;
+		.text-wrapper {
+			padding: .25em 1em;
+			.title {
+				font-size: 6vw;
+			}
+			&:before {
+				opacity: .8;
+			}
+		}
+	}
+	#index-cover{
+		padding: 0 $mobile-padding;
+		background-position: right;
+		.text-wrapper {
+			font-size: .6em;
+		}
+	}
+}
+@media (max-width: 660px) {
+	.cover .text-wrapper .subtitle {
+		font-size: 3.8vw;
+	}
+}
+@media (max-width: 480px) {
+	#index-cover.jarallax {
+		background-size: 300%;
+		justify-content: flex-end;
+		.text-wrapper {
+			width: 25em;
+			padding-bottom: $mobile-padding * 3;
+		}
+	}
+	.cover {
+		min-height: auto;
+		.text-wrapper {
+			.title {
+				font-size: 1.9em;
+			}
+			.subtitle {
+				font-size: 1.2em;
+			}
+		}
+		&.nav05 {
+			background-image: url("../images/05c.jpg");
+		}
+	}
+}
+
+//## MENU-FS && HEADER #######
+@media (max-width: 1600px) and (max-height: 860px) {
+	#menu-fs #menu-options ul {
+		font-size: 6vh;
+	}
+}
+@media (max-width: 960px) {
+	#quotes {
+		display: none;
+	}
+	#menu-fs {
+		#menu-options {
+			width: 100%;
+			top: -100%;
+			left: 0;
+			transition: top .5s ease-out .35s;
+			ul li {
+				transition: opacity ease-out .25s 0s;
+				&:hover {
+					background: transparent;
+					color: $white;
+				}
+			}
+		}
+		&.active #menu-options {
+			transition-delay: .35s;
+			top: 0;
+			li {
+				opacity: 1;
+				transition: opacity ease-out .5s;
+				&.active:hover {
+					color: $white;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 480px) {
+	#main-header {
+		padding: .5em 1em;
+	}
+	#menu-fs #menu-options ul a {
+		padding-left: 8vw;
+	}
+
+}
+
+//## CARDS #######
+@media (max-width: 660px) {
+	.card {
+		.text-wrapper {
+			padding: 0;
+			.content {
+				margin: 0;
+				padding-top: 0;
+				@include short-padding;
+				max-width: 100% !important;
+				.title, .subtitle {
+					display: inline-block;
+					position: relative;
+					z-index: 1;
+					padding: .5em 1em;
+					margin-bottom: 0;
+					transform: translateY(-50%);
+					&:before {
+						@include transparent-layer($grey1, .75);
+						z-index: -1;
+					}
+				}
+				&:before {
+					display: none;
+				}
+			}
+		}
+		&:before {
+			position: static;
+			display: block;
+			height: 20em;
+		}
+	}
+}
+
+//## SECTIONS #######
+// index
+@media (max-width: 660px) {
+	#index-content {
+		.content:nth-child(2) {
+			flex-direction: column;
+			.img {
+				width: 100%;
+				max-width: 100%;
+			}
+			.wrapper {
+				padding-left: 2em;
+				padding-right: 2em;
+				.subtitle {
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 480px) {
+	#abstract ul {
+		justify-content: space-around;
+		li {
+			width: 6em;
+			margin: 4em .5em;
+			&:before {
+				width: 6em;
+				margin-bottom: 0;
+			}
+		}
+	}
+	#index-content {
+		.short-padding {
+			@include short-padding;
+		}
+		.content:nth-child(3) {
+			padding: 0;
+			display: flex;
+			flex-direction: column-reverse;
+			background: transparent;
+			.wrapper {
+				background: $grey0;
+			}
+			.title {
+				margin-top: 1em;
+				@include underlined;
+			}
+			&:before {
+				display: block;
+				position: static;
+				height: 30em;
+				background: url("../images/10.jpg") no-repeat center;
+				background-size: cover;
+				opacity: 1;
+			}
+		}
+		.content:nth-child(4) {
+			padding-top: 4em;
+			padding-bottom: $layout-bottom;
+			.wrapper {
+				flex-direction: column;
+				p {
+					width: 100%;
+					max-width: 100%;
+					margin-bottom: 1em;
+				}
+			}
+		}
+	}
+}
+
+//nuestra filosofía
+@media (max-width: 960px) {
+	$bkgPos: -60%;
+	#principios {
+		li:after {
+			width: 120%;
+		}
+		li:nth-child(3n+1):after {
+			right: $bkgPos;
+		}
+		li:nth-child(3n+2):after {
+			left: $bkgPos;
+		}
+	}
+}
+@media (max-width: 768px) {
+	#principios {
+		$numPos: -.005em;
+		.text-wrapper:before {
+			position: absolute;
+			z-index: -1;
+		}
+		li:nth-child(odd) .text-wrapper:before {
+			left: $numPos;
+		}
+		li:nth-child(even) .text-wrapper:before {
+			right: $numPos;
+		}
+	}
+}
+@media (max-width: 480px) {
+	#principios {
+		.text-wrapper p {
+			margin: 0;
+		}
+		li {
+			padding: 4em $mobile-padding;
+			&:last-child {
+				padding-bottom: $layout-bottom;
+			}
+			&:after {
+				width: 140%;
+			}
+		}
+	}
+}
+
+//metodologias
+@media (max-width: 768px) {
+	#metodologias section:not(.info) {
+		@include short-padding;
+		&:first-child .text-wrapper:before, &:nth-child(2) .text-wrapper:before {
+			background-position: center top;
+			left: 50%;
+			width: 120%;
+			transform: translateX(-50%);
+			height: 30em;
+		}
+		&:first-child {
+			padding-top: 5em;
+		}
+		&:nth-child(2) li {
+			margin-left: 1em;
+			&:before {
+				left: -3.5em;
+			}
+		}
+		.title {
+			text-align: center !important;
+		}
+	}
+}
+
+//Quienes somos
+@media (max-width: 768px) {
+	#equipo-fundador li {
+		@include short-padding;
+	}
+}
+
+//Servicios personalizados
+@media (max-width: 660px) {
+	#lista-servicios {
+		position: relative;
+		.intro {
+			padding-top: 0;
+			padding-bottom: 6em;
+			&:before {
+				margin-bottom: 5em;
+			}
+		}
+		&:before {
+			@include layer;
+			height: 9em;
+			top: -1em;
+			background: $grey0;
+		}
+	}
+}
+
+//Cursos y talleres
+@media (max-width: 660px) {
+	#talleres .card {
+		.subtitle {
+			margin-bottom: -1em;
+		}
+		&:first-child ul {
+			margin-top: -1em;
+		}
+	}
+}
+
+//Contacto
+@media (max-width: 768px) {
+	#contacto .data {
+		flex-direction: column;
+		margin: 1.5em .5em;
+		.contact {
+			text-align: left;
+			margin-bottom: .2em;
+			&:before {
+				margin-left: 0 !important;
+			}
+		}
+	}
+	#formularios form:first-child {
+		margin-top: 5em;
+	}
+}
+@media (max-width: 480px) {
+	#contacto .data {
+		font-size: 1.5em;
+	}
+}

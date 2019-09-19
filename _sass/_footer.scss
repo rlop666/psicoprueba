@@ -1,0 +1,78 @@
+footer {
+	text-align: center;
+	font-size: .9em;
+	position: relative;
+	z-index: 2;
+	p {
+		text-indent: 0;
+		text-align: center;
+		max-width: none;
+		line-height: normal;
+	}
+	.go-top {
+		position: absolute;
+		top: -2em;
+		left: 50%;
+		transform: translateX(-50%);
+		background: url("../images/go-top.svg") no-repeat center;
+		background-size: 100% 200%;
+		background-position: 0 0;
+		width: 2.5em;
+		height: 2.75em;
+		cursor: pointer;
+		&:hover {
+			background-position: 0 100%;
+			animation: bounce 1s both;
+			transform-origin: center bottom;
+		}
+	}
+	.logo {
+		@include logo-dimensions(7.5em);
+		background-position: 0 100%;
+		display: block;
+		margin: auto;
+	}
+	address {
+		background: $black1;
+		color: $white;
+		padding: 1em;
+		line-height: 1.25em;
+		h4 {
+			font-weight: 600;
+			color: $green0;
+		}
+		.contact:before {
+			margin: -.3em .5em 0 0;
+		}
+	}
+	.newsletter {
+		position: relative;
+		background: $white;
+		padding: .5em 1em 1em;
+		input {
+			padding: .25em .5em;
+			-webkit-appearance: none;
+			&[type="email"] {
+				background: $grey1;
+				width: 16em;
+			}
+			&[type="submit"] {
+				background: $green0;
+				color: $white;
+				cursor: pointer;
+				width: 4em;
+				&::-moz-focus-inner {
+					border: 0;
+				}
+				&:hover {
+					background: $green1;
+				}
+			}
+		}
+		.excp {
+			position: absolute;
+			left: -200%;
+			top: 0;
+		}
+	}
+}

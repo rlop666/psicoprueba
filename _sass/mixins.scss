@@ -1,0 +1,65 @@
+@mixin logo-dimensions($logo-width) {
+	width: $logo-width;
+	height: $logo-width * 31.92 / 100;
+}
+@mixin layer {
+	content: "";
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%;
+	height: 100%;
+}
+@mixin transparent-layer($color, $opacity) {
+	@include layer;
+	background: $color;
+	opacity: $opacity;
+}
+@mixin icon($dimensions, $bkg) {
+	content: "";
+	width: $dimensions;
+	min-width: $dimensions;
+	height: $dimensions;
+	background: url("../images/#{$bkg}.svg") no-repeat;
+	display: inline-block;
+}
+@mixin iconbkg($dimensions, $top, $right, $left, $bkg) {
+	content: "";
+	width: $dimensions;
+	height: $dimensions;
+	position: absolute;
+	top: $top; left: $left; right: $right;
+	background: url("../images/#{$bkg}.svg") no-repeat;
+	z-index: -1;
+}
+@mixin underlined {
+	box-sizing: border-box;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	background: url("../images/pattern.png") repeat-x bottom;
+	background-size: 1em;
+	padding: 0 .25em .5em;
+	width: 100%;
+	max-width: 15em;
+	margin-bottom: .5em;
+	&:after, &:before {
+		content: "";
+		flex: 1;
+		height: 0.045em;
+		background: $green1;
+	}
+	&:before {
+		margin-right: .25em;
+	}
+	&:after {
+		margin-left: .25em;
+	}
+	@media (max-width: 480px) {
+		background-size: 7.7%;
+		padding: 0 .25em .55em;
+	}
+}
+@mixin short-padding {
+	padding-left: $mobile-padding !important;
+	padding-right: $mobile-padding !important;
+}

@@ -1,0 +1,397 @@
+//## SECTIONS #######
+//Nuestra filosofía
+#principios {
+	li {
+		position: relative;
+		padding: 4em 1em;
+		width: 100%;
+		max-width: 95em;
+		margin: auto;
+		min-height: 30em;
+		box-sizing: border-box;
+		//NUMBERS
+		.text-wrapper:before {
+			font-family: $gothic;
+			font-size: 30em;
+			line-height: .6em;
+			color: $grey1;
+		}
+		@for $i from 1 through 9 {
+			&:nth-child(#{$i}) .text-wrapper:before {
+				content: "0#{$i}";
+			}
+		}
+		&:first-child {
+			padding-top: 6em;
+		}
+		&:last-child {
+			padding-bottom: 10em;
+		}
+		&:not(:first-child) .text-wrapper:before {
+			letter-spacing: -.04em;
+			margin-right: .05em;
+		}
+		//ZIGZAG BKG
+		&:after {
+			content: "";
+			width: 100%;
+			height: 100%;
+			background: $grey0;
+			position: absolute;
+			top: 0;
+			transform: skewX(-25deg);
+			z-index: -2;
+		}
+		&:nth-child(3n+1):after {
+			right: -28em;
+		}
+		&:nth-child(3n+2):after {
+			left: -28em;
+		}
+		&:nth-child(3n+3):after {
+			display: none;
+		}
+	}
+}
+//Áreas de Intervención
+@for $i from 1 through 4 {
+	#areas .card:nth-child(#{$i}):before {
+		$img: 10 + $i;
+		background-image: url("../images/#{$img}.jpg");
+	}
+}
+//Metodología
+#metodologias section {
+	padding: 5em 4em 6em;
+	.text-wrapper {
+		display: inline-block;
+		position: relative;
+		max-width: $p-em;
+	}
+	&:first-child {
+		padding-top: 6em;
+		.text-wrapper:before {
+			@include iconbkg(23em, -1em, 0, -10%, "persona");
+			background-position: left;
+		}
+		.title {
+			text-align: right;
+			margin: 0 -.5em .25em 0;
+		}
+	}
+	&:nth-child(2) {
+		background: $grey0;
+		.text-wrapper {
+			z-index: 1;
+			&:before {
+				@include iconbkg(23em, -1em, -5%, auto, "personas");
+			}
+		}
+		.title {
+			text-align: left;
+			margin: 0 0 .25em -.5em;
+		}
+		li{
+			position: relative;
+			box-sizing: border-box;
+			margin-left: 2em;
+			&:before {
+				@include iconbkg(7em, 50%, auto, -4.5em, "lista");
+				transform: translateY(-50%);
+				background-size: 100% 400%;
+			}
+			$value: 0;
+			@for $i from 1 through 4 {
+				&:nth-child(#{$i}):before {
+					background-position: 0 $value*1%;
+				}
+				$value: $value+33.3;
+			}
+		}
+	}
+	&.info {
+		max-width:50em;
+		padding: 5em 5.5em 5.5em;
+	}
+}
+//Quienes somos
+#equipo-fundador li{
+	box-sizing: border-box;
+	padding: 3em 2em 7em;
+	min-height: 18em;
+	position: relative;
+	z-index: 1;
+	p {
+		display: inline-block;
+	}
+	span {
+		font-weight: bold;
+		color: $green1;
+	}
+	.bkg {
+		position: absolute;
+		font-family: $osans-cnd;
+		font-size: 42em;
+		line-height: .6em;
+		bottom: 0; left: -.1em;
+		z-index: -1;
+	}
+	&:nth-child(odd) {
+		background: $grey0;
+		.bkg {
+			color: $white;
+		}
+	}
+	&:nth-child(even) {
+		background: $white;
+		.bkg {
+			color: $grey0;
+		}
+	}
+	&:last-child {
+		padding-bottom: 10em;
+	}
+	.individual {
+		width: 10em;
+		height: 10em;
+		display: block;
+		margin: 0 auto;
+		background: url("../images/individual.png");
+		background-size: 100% 900%;
+	}
+	$value: 0;
+	@for $i from 1 through 9 {
+		&:nth-child(#{$i}) .individual {
+			background-position: 0 $value*1%;
+		}
+		$value: $value+12.5;
+	}
+}
+//Servicios
+#area-servicios .card {
+	.content {
+		max-width: 28em;
+	}
+	&:before {
+		max-height: 38em;
+	}
+	@for $i from 1 through 3 {
+		&:nth-child(#{$i}):before {
+			$img: 14 + $i;
+			background-image: url("../images/#{$img}.jpg");
+		}
+	}
+}
+#lista-servicios {
+	.intro {
+		padding-top: 4em;
+		position: relative;
+		&:before {
+			content: "";
+			width: 100%;
+			height: 7em;
+			display: block;
+			background: url("../images/evaluaciones.svg") no-repeat center;
+			margin-bottom: 2.5em;
+		}
+	}
+	li {
+		.text-wrapper:before {
+			@include icon(15em, "servicios");
+			background-size: 100% 500%;
+		}
+		$value: 0;
+		@for $i from 1 through 5 {
+			&:nth-child(#{$i}) .text-wrapper:before {
+				background-position: 0 $value*1%;
+			}
+			$value: $value+25;
+		}
+	}
+	.info {
+		max-width:50em;
+		padding: 2.5em;
+		&:before {
+			width: 3.5em;
+			height: 3.5em;
+		}
+	}
+}
+//Cursos y talleres
+#recursos {
+	.zigzag li {
+		.text-wrapper:before {
+			@include icon(15em, "cursos-talleres");
+			background-size: 100% 300%;
+		}
+		$value: 0;
+		@for $i from 1 through 3 {
+			&:nth-child(#{$i}) .text-wrapper:before {
+				background-position: 0 $value*1%;
+			}
+			$value: $value+50;
+		}
+	}
+}
+#talleres .card {
+	.content {
+		max-width: 28em;
+	}
+	&:first-child{
+		margin-top: 8em;
+		&:before {
+			max-height: 42em;
+		}
+	}
+	@for $i from 1 through 2 {
+		&:nth-child(#{$i}):before {
+			$img: 17 + $i;
+			background-image: url("../images/#{$img}.jpg");
+		}
+	}
+}
+//Contacto
+#contacto {
+	.data {
+		font-size: 2em;
+		display: inline-flex;
+		margin: 2.5em 0;
+		h1 {
+			font-family: $osans;
+		}
+		.contact {
+			&:before {
+				margin-right: .15em;
+			}
+			&:last-child:before {
+				margin-left: 1em;
+			}
+		}
+	}
+	#map {
+		height: 30em;
+		width: 100%;
+		.gm-style-iw{
+			h4, p {
+				margin: 0;
+				padding: 0;
+			}
+			h4 {
+				font-size: 1.5em;
+			}
+		}
+		.gm-style-pbc {
+			z-index: 10 !important;
+		}
+		.gm-style-pbt {
+			font-size: 2em !important;
+			font-weight: bold;
+			text-align: center;
+			text-indent: 0;
+			width: 80%;
+			margin: auto;
+		}
+	}
+}
+#formularios {
+	max-width: 40em;
+	margin: auto;
+	form {
+		margin: 5em $mobile-padding;
+		&:first-child {
+			margin-top: 8em;
+		}
+		&:last-child {
+			margin-bottom: 8em;
+		}
+		input, textarea, select {
+			display: block;
+			box-sizing: border-box;
+			padding: .25em;
+			border: .125em solid $grey1;
+			width: 100%;
+			&:focus {
+				border-color: $green0;
+			}
+		}
+		[type="submit"] {
+			width: auto;
+			display: inline-block;
+			margin-top: 2em;
+			padding: .5em 1em;
+			background: $green1;
+			color: $white;
+			cursor: pointer;
+			border: 0;
+			&:hover {
+				opacity: .9;
+			}
+		}
+		.form-group {
+			margin: .5em 0;
+			text-align: left;
+			p {
+				text-indent: 0;
+				margin: .5em 0;
+				&.excp {
+					font-style: italic;
+					font-size: .98;
+				}
+			}
+			label {
+				line-height: 2em;
+				font-weight: bold;
+				&:after {
+					content: "*";
+				}
+			}
+		}
+		.group-wrapper {
+			display: flex;
+			& > :first-child {
+				max-width: 15em;
+				width: 40%;
+			}
+			& > :last-child {
+				flex: 1;
+				margin-left: 1em;
+			}
+		}
+		.reverse {
+			text-align: right;
+		}
+	}
+	#form-popups {
+		position: fixed;
+		top: 0; left: 0;
+		z-index: 1000;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		&:before {
+			@include transparent-layer($grey0, .8);
+			z-index: -1;
+		}
+		.cssload-thecube {
+			margin-top: -2em;
+		}
+	}
+	.alert {
+		padding: 2em 4em;
+		margin: 1em;
+		background: $white;
+		margin-top: -2em;
+		border: 0.125em solid ;
+		&.success {
+			color: $green1;
+			border-color: $green1;
+		}
+		&.error {
+			color: red;
+			border-color: red;
+		}
+	}
+}
