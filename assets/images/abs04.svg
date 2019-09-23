@@ -1,21 +1,10 @@
-<svg width="650" height="640" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
- <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
- <defs>
-  <symbol viewBox="0 0 116.6 95.8" id="svg_7" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
-   <style type="text/css">.st0{fill:none;stroke:#019287;stroke-width:2;stroke-miterlimit:10;}</style>
-   <g id="svg_2">
-    <path d="m49.6,61.9l4.1,1.5l4.4,-0.5l0,-15.2l-15.1,0l-0.5,-4.3l1.5,-4.2c0.7,-2.8 -1.5,-5.6 -4.4,-5.6l-2.2,0c-2.9,0 -5.1,2.8 -4.4,5.6l1.5,4.1l-0.5,4.4l-15,0l0,39.5l39.2,0l0,-15.3l-4.4,-0.5l-4.1,1.5c-2.8,0.7 -5.6,-1.5 -5.6,-4.4l0,-2.2c-0.1,-2.9 2.7,-5.1 5.5,-4.4z" class="st0" id="svg_6"/>
-    <path d="m44,39.2l-1.5,4.1l0.5,4.4l15.1,0l0,-15.1l4.4,-0.5l4.1,1.5c2.8,0.7 5.6,-1.5 5.6,-4.4l0,-2.2c0,-2.9 -2.7,-5.1 -5.6,-4.4l-4.1,1.5l-4.4,-0.5l0,-15l-39.1,0l0,39.2l15,0l0.5,-4.3l-1.5,-4.3c-0.7,-2.8 1.5,-5.6 4.4,-5.6l2.2,0c3,0 5.1,2.8 4.4,5.6z" class="st0" id="svg_5"/>
-    <path d="m66.7,33.6l-4.2,-1.5l-4.4,0.5l0,15.1l15.3,0l0.5,4.4l-1.5,4.1c-0.7,2.8 1.5,5.6 4.4,5.6l2.2,0c2.9,0 5.1,-2.7 4.4,-5.6l-1.5,-4.1l0.5,-4.4l15.3,0l0,-39.1l-39.6,0l0,15.1l4.4,0.5l4.1,-1.5c2.8,-0.7 5.6,1.5 5.6,4.4l0,2.2c0,2.9 -2.7,5 -5.5,4.3z" class="st0" id="svg_4"/>
-    <path d="m72.4,56.3l1.5,-4.1l-0.5,-4.4l-15.3,0l0,15.2l-4.3,0.5l-4.2,-1.5c-2.8,-0.7 -5.6,1.5 -5.6,4.4l0,2.2c0,2.9 2.8,5.1 5.7,4.4l4.1,-1.5l4.4,0.5l0,15.3l39.5,0l0,-39.6l-15.3,0l-0.5,4.4l1.5,4.1c0.7,2.8 -1.5,5.6 -4.4,5.6l-2.2,0c-3,0 -5.1,-2.7 -4.4,-5.5z" class="st0" id="svg_3"/>
-   </g>
-  </symbol>
- </defs>
- <g display="none">
-  <title>Layer 1</title>
-  <use x="0" y="0" transform="matrix(1.3722126483917236,0,0,1.3722126483917236,0,0) " xlink:href="#svg_7" id="svg_8"/>
-  <g id="svg_9"/>
- </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 116.6 95.8" style="enable-background:new 0 0 116.6 95.8;" xml:space="preserve">
+<style type="text/css">
+  .st0{fill:none;stroke:#019287;stroke-width:2;stroke-miterlimit:10;}
+</style>
  <g display="inline">
   <title>Layer 2</title>
   <line id="svg_10" y2="23" x2="566.33333" y1="23" x1="27.33333" stroke-width="10" stroke="#009286" fill="none"/>
