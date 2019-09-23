@@ -1,20 +1,20 @@
-<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+<svg width="150" height="130" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
  <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
  <g>
   <title>Layer 1</title>
-  <rect id="svg_1" height="106" width="103" y="132" x="183" stroke-width="5" stroke="#009286" fill="#ffffff"/>
-  <g transform="rotate(-37.02009201049805 276.73138427734364,185.61111450195307) " id="svg_14">
-   <line stroke="#009286" id="svg_3" y2="179.361111" x2="315.694441" y1="179.861111" x1="243.694445" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="none"/>
-   <line id="svg_4" stroke="#009286" y2="189.111111" x2="315.694441" y1="189.611111" x1="243.694445" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="none"/>
-   <line id="svg_5" y2="190.361111" x2="313.194445" y1="179.361111" x1="313.194445" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#009286" fill="none"/>
-   <g transform="rotate(44.57559585571289 244.56944274902347,185.61111450195312) " id="svg_13">
-    <line stroke="#009286" id="svg_11" y2="190.861111" x2="240.694445" y1="180.361111" x1="240.694445" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="none"/>
-    <line id="svg_12" y2="188.361111" x2="240.194445" y1="188.361111" x1="248.944445" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#009286" fill="none"/>
+  <rect fill-opacity="0" fill="#000000" stroke="#009286" stroke-width="5" x="19" y="18.666668" width="103" height="106" id="svg_1"/>
+  <g id="svg_14" transform="rotate(-37.02009201049805 112.73138427734374,72.27796173095702) ">
+   <line fill="none" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x1="79.694445" y1="66.527779" x2="151.694441" y2="66.027779" id="svg_3" stroke="#009286"/>
+   <line fill="none" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x1="79.694445" y1="76.277779" x2="151.694441" y2="75.777779" stroke="#009286" id="svg_4"/>
+   <line fill="none" stroke="#009286" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x1="149.194445" y1="66.027779" x2="149.194445" y2="77.027779" id="svg_5"/>
+   <g id="svg_13" transform="rotate(44.57559585571289 80.56944274902344,72.27796173095702) ">
+    <line fill="none" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x1="76.694445" y1="67.027779" x2="76.694445" y2="77.527779" id="svg_11" stroke="#009286"/>
+    <line fill="none" stroke="#009286" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x1="84.944445" y1="75.027779" x2="76.194445" y2="75.027779" id="svg_12"/>
    </g>
   </g>
-  <line id="svg_15" y2="154.222222" x2="274.222222" y1="154.222222" x1="194.666667" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#009286" fill="none"/>
-  <line id="svg_17" y2="171.555549" x2="274.444448" y1="171.555549" x1="194.888892" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#009286" fill="none"/>
-  <line stroke="#009286" id="svg_18" y2="187.999993" x2="262.444449" y1="187.999993" x1="194.888891" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="none"/>
-  <line stroke="#009286" id="svg_19" y2="206.666659" x2="242.444446" y1="206.666659" x1="194.444446" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="none"/>
+  <line fill="none" stroke="#009286" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x1="30.666667" y1="40.88889" x2="110.222222" y2="40.88889" id="svg_15"/>
+  <line fill="none" stroke="#009286" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x1="30.888892" y1="58.222217" x2="110.444448" y2="58.222217" id="svg_17"/>
+  <line fill="none" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x1="30.888891" y1="74.666661" x2="98.444449" y2="74.666661" id="svg_18" stroke="#009286"/>
+  <line fill="none" stroke-width="5" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x1="30.444446" y1="93.333327" x2="78.444446" y2="93.333327" id="svg_19" stroke="#009286"/>
  </g>
 </svg>
